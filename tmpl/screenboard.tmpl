@@ -12,7 +12,7 @@ resource "datadog_screenboard" "{{ .Id }}" {
   template_variable {
     name    = "{{ .Name }}"
     prefix  = "{{ .Prefix }}"
-    default = "{{ .Default }}" 
+    default = "{{ .Default }}"
   }
   {{- end }}
   {{- end }}
@@ -66,6 +66,24 @@ resource "datadog_screenboard" "{{ .Id }}" {
       {{- end }}
       {{- if .TextAlign }}
       text_align = "{{ .TextAlign }}"
+      {{- end }}
+      {{- if .Style }}
+      {{- with .Style }}
+      style {
+        {{- if .Palette }}
+        palette = "{{ .Palette }}"
+        {{- end }}
+        {{- if .PaletteFlip }}
+        palette_flip = {{ .PaletteFlip }}
+        {{- end }}
+        {{- if .FillMin }}
+        fill_min = "{{ .FillMin }}"
+        {{- end }}
+        {{- if .FillMax }}
+        fill_max = "{{ .FillMax }}"
+        {{- end }}
+      } //style
+      {{- end }}
       {{- end }}
       {{- if .Requests }}
       {{- with .Requests }}
@@ -133,7 +151,7 @@ resource "datadog_screenboard" "{{ .Id }}" {
           image_url = "{{ .ImageURL }}"
           {{- end }}
         }
-        {{- end }} 
+        {{- end }}
         {{- end }}
         {{- end }}
         {{- if .Style }}

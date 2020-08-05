@@ -3,7 +3,7 @@
 package main
 
 import (
-	"github.com/zorkian/go-datadog-api"
+	"github.com/clarketm/go-datadog-api"
 )
 
 var exampleScreenboard = datadog.Screenboard{

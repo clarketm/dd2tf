@@ -2,70 +2,63 @@
 
 
 [[projects]]
-  digest = "1:0d5fdcd4a963f5486979d53d72c7d784ced34836e3eba766977962c1e630fedd"
+  digest = "1:fe9b15f080d19c215514056bae7589d6958821766fb5f5fceb9402ec9df2f736"
   name = "github.com/cenkalti/backoff"
   packages = ["."]
   pruneopts = "UT"
-  revision = "b02f2bbce11d7ea6b97f282ef1771b0fe2f65ef3"
+  revision = "18fe4ce5a8550e0d0919b680ad3c080a5455bddf"
+  version = "v4.0.2"
 
 [[projects]]
-  digest = "1:0a69a1c0db3591fcefb47f115b224592c8dfa4368b7ba9fae509d5e16cdc95c8"
+  digest = "1:994ca70b788d8243f1226cc525d17b4a8d353f8f35b0b755d37fa7df38303598"
+  name = "github.com/clarketm/go-datadog-api"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "f1a172b71e0ae08c5d0ed76ec2f13b416757a24e"
+  version = "v2.29.1"
+
+[[projects]]
+  digest = "1:09cb61dc19af93deae01587e2fdb1c081e0bf48f1a5ad5fa24f48750dc57dce8"
   name = "github.com/konsorten/go-windows-terminal-sequences"
   packages = ["."]
   pruneopts = "UT"
-  revision = "5c8c8bd35d3832f5d134ae1e1e375b69a4d25242"
-  version = "v1.0.1"
-
-[[projects]]
-  digest = "1:69b1cc331fca23d702bd72f860c6a647afd0aa9fcbc1d0659b1365e26546dd70"
-  name = "github.com/sirupsen/logrus"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "bcd833dfe83d3cebad139e4a29ed79cb2318bf95"
-  version = "v1.2.0"
-
-[[projects]]
-  digest = "1:c1b1102241e7f645bc8e0c22ae352e8f0dc6484b6cb4d132fa9f24174e0119e2"
-  name = "github.com/spf13/pflag"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "298182f68c66c05229eb03ac171abe6e309ee79a"
+  revision = "edb144dfd453055e1e49a3d8b410a660b5a87613"
   version = "v1.0.3"
 
 [[projects]]
-  digest = "1:4ead1c6f5d8ea20782d97da1e605967414435616019b006375d4f73e10c79a19"
-  name = "github.com/zorkian/go-datadog-api"
+  digest = "1:05eebdd5727fea23083fce0d98d307d70c86baed644178e81608aaa9f09ea469"
+  name = "github.com/sirupsen/logrus"
   packages = ["."]
   pruneopts = "UT"
-  revision = "1da8da5725ee2cd0ac164baf69c8ec81cb4941df"
-  version = "v2.29.0"
+  revision = "60c74ad9be0d874af0ab0daef6ab07c5c5911f0d"
+  version = "v1.6.0"
 
 [[projects]]
-  branch = "master"
-  digest = "1:38f553aff0273ad6f367cb0a0f8b6eecbaef8dc6cb8b50e57b6a81c1d5b1e332"
-  name = "golang.org/x/crypto"
-  packages = ["ssh/terminal"]
+  digest = "1:524b71991fc7d9246cc7dc2d9e0886ccb97648091c63e30eef619e6862c955dd"
+  name = "github.com/spf13/pflag"
+  packages = ["."]
   pruneopts = "UT"
-  revision = "8d7daa0c54b357f3071e11eaef7efc4e19a417e2"
+  revision = "2e9d26c8c37aae03e3f9d4e90b7116f5accb7cab"
+  version = "v1.0.5"
 
 [[projects]]
   branch = "master"
-  digest = "1:191cccd950a4aeadb60306062f2bdc2f924d750d0156ec6c691b17211bfd7349"
+  digest = "1:83f4f22f3cbb1e50746fa6d88b054f557993bc29422ae0f524d0e85abe7eee75"
   name = "golang.org/x/sys"
   packages = [
+    "internal/unsafeheader",
     "unix",
-    "windows",
   ]
   pruneopts = "UT"
-  revision = "82a175fd1598e8a172e58ebdf5ed262bb29129e5"
+  revision = "0cf7623e9dbd9bc79267b27a7e6c5757ef550423"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
+    "github.com/clarketm/go-datadog-api",
     "github.com/sirupsen/logrus",
     "github.com/spf13/pflag",
-    "github.com/zorkian/go-datadog-api",
   ]
   solver-name = "gps-cdcl"
   solver-version = 1

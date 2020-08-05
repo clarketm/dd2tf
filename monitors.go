@@ -5,7 +5,7 @@ package main
 import (
 	"errors"
 	"strconv"
-	"github.com/zorkian/go-datadog-api"
+	"github.com/clarketm/go-datadog-api"
 )
 
 type Monitor struct {
