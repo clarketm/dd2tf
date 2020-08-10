@@ -47,7 +47,7 @@ resource "datadog_screenboard" "{{ .Id }}" {
     {{- end }}
     {{- if .Time }}
     {{- with .Time }}
-    time {
+    time = {
       live_span = "{{ .LiveSpan }}"
     }
     {{- end }}
@@ -69,7 +69,7 @@ resource "datadog_screenboard" "{{ .Id }}" {
       {{- end }}
       {{- if .Style }}
       {{- with .Style }}
-      style {
+      style = {
         {{- if .Palette }}
         palette = "{{ .Palette }}"
         {{- end }}
@@ -156,7 +156,7 @@ resource "datadog_screenboard" "{{ .Id }}" {
         {{- end }}
         {{- if .Style }}
         {{- with .Style }}
-        style {
+        style = {
           {{- if .Palette }}
           palette = "{{ .Palette }}"
           {{- end }}
