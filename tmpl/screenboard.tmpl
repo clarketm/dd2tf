@@ -255,7 +255,7 @@ resource "datadog_screenboard" "{{ .Id }}" {
     tick_edge = "{{ .TickEdge }}"
     {{- end }}
     {{- if .HTML }}
-    html = "{{ .HTML }}"
+    html = "{{ .HTML | escapeNewlines }}"
     {{- end }}
     {{- if .Tick }}
     tick = "{{ .Tick }}"

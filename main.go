@@ -8,6 +8,7 @@ import (
 	log "github.com/sirupsen/logrus"
 	"os"
 	"strconv"
+	"strings"
 	"text/template"
 
 	flag "github.com/spf13/pflag"
@@ -52,6 +53,7 @@ func (i *Item) renderElement(item interface{}, config LocalConfig) {
 	b, _ := Asset(i.d.getAsset())
 	t, _ := template.New("").Funcs(template.FuncMap{
 		"escapeCharacters": escapeCharacters,
+		"escapeNewlines":   escapeNewlines,
 		"DeRefString":      func(s *string) string { return *s },
 	}).Parse(string(b))
 
@@ -71,6 +73,11 @@ func (i *Item) renderElement(item interface{}, config LocalConfig) {
 	} else {
 		t.Execute(os.Stdout, item)
 	}
+}
+
+// Replace literal newline quote with escape
+func escapeNewlines(line string) string {
+	return strings.ReplaceAll(line, "\n", "\\n")
 }
 
 // Replace escaped quote with apostrophe
