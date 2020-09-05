@@ -10,11 +10,11 @@
   version = "v4.0.2"
 
 [[projects]]
-  digest = "1:994ca70b788d8243f1226cc525d17b4a8d353f8f35b0b755d37fa7df38303598"
+  digest = "1:7e586e92d601350c5e33c745f7d24bbac6840daaf8b9d4cbde31f3668945a3ab"
   name = "github.com/clarketm/go-datadog-api"
   packages = ["."]
   pruneopts = "UT"
-  revision = "f1a172b71e0ae08c5d0ed76ec2f13b416757a24e"
+  revision = "61c61af2266071e5526f9d176a80ff1e7bb4efd7"
   version = "v2.29.1"
 
 [[projects]]
